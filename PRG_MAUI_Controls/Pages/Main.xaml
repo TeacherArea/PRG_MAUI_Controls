@@ -14,32 +14,15 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="20*" />
+                <RowDefinition Height="0" />
             </Grid.RowDefinitions>
-
-            <Border Grid.Row="2"
-                    Grid.Column="1"
-                    Stroke="Black"
-                    StrokeThickness="1"
-                    Padding="10">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="5" />
-                </Border.StrokeShape>
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToAlert" />
-                </Border.GestureRecognizers>
-                <Label 
-                   Text="Popup-ruta"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-            </Border>
 
             <Label Text="En studie i MAUI Controls"
                    Grid.Column="0"
@@ -49,12 +32,38 @@
                    HorizontalOptions="Center"
                    FontSize="20"/>
 
+            <Label Text="Knapparna nedan är inte knappar utan istället används färgade &lt;Border&gt;"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="5"
+                   />
+            
+
+
+            <Border Grid.Row="2"
+                    Grid.Column="1"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="#86DABC">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToAlert" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Popup-ruta"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Border>
+
             <Border Grid.Row="2"
                     Grid.Column="2"
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#4ED1B0">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="GoToText" />
                 </Border.GestureRecognizers>
@@ -72,7 +81,7 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#3EB6A2">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
@@ -90,15 +99,15 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#6CBDBD">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToAlert" />
+                    <TapGestureRecognizer Tapped="GoToProgress" />
                 </Border.GestureRecognizers>
                 <Label 
-                   Text="Popup-ruta"
+                   Text="Slider &amp; Progressbar"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
             </Border>
@@ -108,15 +117,15 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#5B88A1">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToText" />
+                    <TapGestureRecognizer Tapped="GoToCollections" />
                 </Border.GestureRecognizers>
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Label 
-                   Text="Text"
+                   Text="Listor &amp; kollektioner"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             </Border>
@@ -126,15 +135,15 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#007C78">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToImages" />
+                    <TapGestureRecognizer Tapped="GoToTime" />
                 </Border.GestureRecognizers>
                 <Label 
-                   Text="Bilder"
+                   Text="Tid &amp; Datum"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             </Border>
@@ -144,15 +153,15 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#83ACBD">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToAlert" />
+                    <TapGestureRecognizer Tapped="GoToSwitches" />
                 </Border.GestureRecognizers>
                 <Label 
-                   Text="Popup-ruta"
+                   Text="Switchar"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
             </Border>
@@ -162,15 +171,15 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#005C5F">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToText" />
+                    <TapGestureRecognizer Tapped="GoToAnimations" />
                 </Border.GestureRecognizers>
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Label 
-                   Text="Text"
+                   Text="Animationer"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             </Border>
@@ -180,19 +189,41 @@
                     Stroke="Black"
                     StrokeThickness="1"
                     Padding="10"
-                    BackgroundColor="White">
+                    BackgroundColor="#008767">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToForms" />
+                </Border.GestureRecognizers>
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToImages" />
-                </Border.GestureRecognizers>
                 <Label 
-                   Text="Bilder"
+                   Text="Former"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             </Border>
 
+
+            <Label Text="Nedan är ett exempel på hur man kan lägga in en hemsida."
+                   Grid.Column="1"
+                   Grid.Row="5"
+                   Grid.ColumnSpan="5" 
+                   Margin="0,40"/>
+
+            <Border Grid.Row="6"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"            
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                
+                <WebView Source="https://www.disney.com"
+                         HeightRequest="800"/>
+            </Border>
         </Grid>
     </ScrollView>
 

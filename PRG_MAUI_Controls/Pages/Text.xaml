@@ -48,6 +48,12 @@
                 Text="Till sist: en färgad text, fast denna gång med lite genomskinlighet styrd från CodeBehind (C#-filen)"
                 Margin="0,20, 0, 40"/>
 
+            <Button Text="Startsidan"
+                    Margin="50"
+                    BackgroundColor="Firebrick"
+                    x:Name="StartButton"
+                    Clicked="GoToStart" />
+
         </VerticalStackLayout>
 
 

@@ -22,5 +22,35 @@
         {
             await DisplayAlert("Info", "Du klickade på fyrkanten!", "OK");
         }
+
+        private async void GoToProgress(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Progress");
+        }
+
+        private async void GoToCollections(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Collections");
+        }
+
+        private async void GoToTime(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Time");
+        }
+
+        private async void GoToSwitches(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Switches");
+        }
+
+        private async void GoToForms(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Forms");
+        }
+
+        private async void GoToAnimations(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Animations");
+        }
     }
 }

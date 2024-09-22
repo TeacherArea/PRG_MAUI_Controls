@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Collections"
+             Title="Collections1">
+    <VerticalStackLayout>
+        <Label 
+            Text="Listor och kollektioner"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"/>
+
+        <Label Text="CollectionView"
+               FontSize="16"/>
+
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                    <x:String>Item 3</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+
+        <Label Text="CarouselView"
+               FontSize="16"/>
+        <CarouselView>
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Bild 1</x:String>
+                    <x:String>Bild 2</x:String>
+                    <x:String>Bild 3</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Label Text="ListView"
+               FontSize="16"/>
+
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                    <x:String>Item 3</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+
+        <Label Text="Picker"
+               FontSize="16"/>
+
+        <StackLayout>
+            <Picker Title="Välj ett alternativ">
+                <Picker.Items>
+                    <x:String>Alternativ 1</x:String>
+                    <x:String>Alternativ 2</x:String>
+                    <x:String>Alternativ 3</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+
+        <Label Text="TableView"
+               FontSize="16"/>
+
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Inställningar">
+                    <TextCell Text="Namn" Detail="John Doe" />
+                    <SwitchCell Text="Tillåt notiser" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+
+        <Label Text="SearchBar"
+               FontSize="16"/>
+
+        <SearchBar Placeholder="Sök här..." SearchCommand="{Binding SearchCommand}" />
+
+        <Button Text="Startsidan"
+                    Margin="50"
+                    BackgroundColor="Firebrick"
+                    x:Name="StartButton"
+                    Clicked="GoToStart" />
+    </VerticalStackLayout>
+</ContentPage>

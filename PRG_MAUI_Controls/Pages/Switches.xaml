@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Switches"
+             Title="Switches">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label 
+            Text="Värdeändringar"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"
+            TextColor="Firebrick"/>
+
+            <Label Text="Switchar"
+               FontSize="20"
+               FontAttributes="Bold" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Switch IsToggled="True" />
+                <Switch x:Name="aSwitch" 
+                    Margin="0,0,10,0"/>
+                <Label Text="{Binding Source={x:Reference aSwitch}, Path=IsToggled}" 
+                   VerticalOptions="Center"
+                   Margin="0,0,40,0"/>
+            </StackLayout>
+
+            <Label Text="Aktivera mörkt läge"
+               FontSize="20"
+               FontAttributes="Bold" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Switch x:Name="DarkModeSwitch" Toggled="DarkMode"/>
+                <Label Text="Mörkt läge"
+                   VerticalOptions="Center"
+                   Margin="0,0,10,0"/>
+            </StackLayout>
+
+            <Label Text="Sliders"
+               FontSize="20"
+               FontAttributes="Bold" 
+               Margin="0,50,0,0"/>
+
+            <Slider x:Name="aSlider" Minimum="0" Maximum="100" ValueChanged="OnSliderValueChanged"/>
+
+            <Label Text="{Binding Source={x:Reference aSlider}, Path=Value, StringFormat='Värde: {0:F0}'}"
+               VerticalOptions="Center" />
+
+
+            <Label Text="Justera bakgrundsfärgen med reglagen" 
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+            <Label Text="Röd" HorizontalOptions="Center" />
+            <Slider x:Name="redSlider" Minimum="0" Value="128" Maximum="255" ValueChanged="OnColorSliderValueChanged" />
+
+            <Label Text="Grön" HorizontalOptions="Center" />
+            <Slider x:Name="greenSlider" Minimum="0" Value="128" Maximum="255" ValueChanged="OnColorSliderValueChanged" />
+
+            <Label Text="Blå" HorizontalOptions="Center" />
+            <Slider x:Name="blueSlider" Minimum="0" Value="128" Maximum="255" ValueChanged="OnColorSliderValueChanged" />
+
+            <Label x:Name="colorCodeLabel" Text="RGB(0,0,0)" HorizontalOptions="Center" FontSize="16" />
+
+
+            <Label Text="Stepper"
+               FontSize="20"
+               FontAttributes="Bold"
+               Margin="0,20,0,0"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Testa att räkna till 3. Och sen till 5."/>
+                <Stepper x:Name="myStepper" Minimum="0" Maximum="10" Increment="1" ValueChanged="OnStepperValueChanged"/>
+                <Label Text="{Binding Source={x:Reference myStepper}, Path=Value, StringFormat='Värde: {0:F0}. Prova att räkna upp till 5.'}" 
+                   VerticalOptions="Center" />
+            </StackLayout>
+
+            <Button Text="Startsidan"
+                Margin="50"
+                BackgroundColor="Firebrick"
+                TextColor="White"
+                x:Name="StartButton"
+                Clicked="GoToStart" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

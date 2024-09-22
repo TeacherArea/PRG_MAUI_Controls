@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Forms"
+             Title="Forms">
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Label 
+            Text="Grafiska former"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"/>
+
+            <Label Text="Fyrkant gjord med BoxWiew"
+               HorizontalOptions="Center" 
+               Margin="0,50,0,20"/>
+
+            <BoxView Color="Firebrick" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+
+            <Label Text="Rektangel gjord med BoxWiew"
+                   HorizontalOptions="Center" 
+               Margin="0,50,0,20"/>
+
+            <BoxView Color="Firebrick" HeightRequest="130" WidthRequest="250" HorizontalOptions="Center" />
+
+            <Label Text="Cirkel gjord med Ellipse"
+               HorizontalOptions="Center" 
+               Margin="0,50,0,20"/>
+
+            <Ellipse Fill="Firebrick" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" />
+
+            <Label Text="Rektangel gjord med Polygon"
+               Margin="0,50,0,10"
+               HorizontalOptions="Center" />
+
+            <Polygon Fill="Firebrick" Points="50,0 100,100 0,100" HorizontalOptions="Center" />
+
+
+            <Label Text="En linje gjord med Line"
+                   HorizontalOptions="Center" 
+                   Margin="0,50,0,10"/>
+
+            <Line X1="0" Y1="0" X2="100" Y2="100" Stroke="Firebrick" StrokeThickness="2" HorizontalOptions="Center" />
+
+            <Label Text="En fyrkant med rundade hörn, gjord med Frame"
+               HorizontalOptions="Center" 
+               Margin="0,50,0,10"/>
+
+            <Frame BackgroundColor="Firebrick" CornerRadius="20" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+
+            <Button Text="Startsidan"
+                    Margin="50"
+                    BackgroundColor="Firebrick"
+                    x:Name="StartButton"
+                    Clicked="GoToStart" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
