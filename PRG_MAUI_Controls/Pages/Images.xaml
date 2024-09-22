@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Images"
+             BackgroundImageSource="fog_on_dark_waters.jpg"
+             Title="Images">
+
+    <ScrollView>
+        <Grid ColumnSpacing="20" RowSpacing="20">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+
+            <Label 
+                Text="Bilder"
+                FontSize="20"
+                Margin="30"
+                TextColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="7">
+                <Label.Shadow>
+                    <Shadow Brush="Black" 
+                            Opacity="0.8"
+                            Offset="5,5" 
+                            Radius="10" />
+                </Label.Shadow>
+            </Label>
+
+            <Image Source="umbrella_a.jpg" Grid.Row="1" Grid.Column="2" Aspect="AspectFill" Grid.ColumnSpan="3" Margin="0,0,0,30"/>
+
+            <Image Source="umbrella_b.jpg" Grid.Row="2" Grid.Column="1" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="2" Grid.Column="2" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="2" Grid.Column="3" Aspect="AspectFill" />
+
+            <Image Source="umbrella_b.jpg" Grid.Row="3" Grid.Column="1" Aspect="AspectFill" />
+            <BoxView Grid.Row="3" Grid.Column="3" BackgroundColor="Transparent" /><!-- Tom ruta, eller snarare genomskinlig -->
+            <Image Source="umbrella_b.jpg" Grid.Row="3" Grid.Column="3" Aspect="AspectFill" />
+
+            <Image Source="umbrella_b.jpg" Grid.Row="4" Grid.Column="1" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="4" Grid.Column="2" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="4" Grid.Column="3" Aspect="AspectFill" />
+
+            <Image Source="umbrella_b.jpg" Grid.Row="5" Grid.Column="1" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="5" Grid.Column="2" Aspect="AspectFill" />
+            <Image Source="umbrella_b.jpg" Grid.Row="5" Grid.Column="3" Aspect="AspectFill" />
+            
+            <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3">
+                <Image Source="umbrella_a.jpg" Aspect="AspectFill">
+                    <Image.Shadow>
+                        <Shadow Brush="White"
+                            Opacity="0.5"
+                            Offset="10,4"
+                            Radius="20" />
+                    </Image.Shadow>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TappedImage" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Till Start"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="24"
+                       TextColor="White"
+                       BackgroundColor="Transparent">
+                    <Label.Shadow>
+                        <Shadow Brush="Black"
+                                Opacity="0.9"
+                                Radius="5"
+                                Offset="5,5"/>
+                    </Label.Shadow>
+                </Label>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+

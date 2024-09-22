@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Main">
+
+    <ScrollView>
+        <Grid ColumnSpacing="10" RowSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="26.66*" />
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="2"
+                    Grid.Column="1"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToAlert" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Popup-ruta"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Border>
+
+            <Label Text="En studie i MAUI Controls"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="5"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="20"/>
+
+            <Border Grid.Row="2"
+                    Grid.Column="2"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToText" />
+                </Border.GestureRecognizers>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Label 
+                   Text="Text"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+            <Border Grid.Row="2"
+                    Grid.Column="3"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToImages" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Bilder"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+            <Border Grid.Row="3"
+                    Grid.Column="1"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToAlert" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Popup-ruta"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Border>
+
+            <Border Grid.Row="3"
+                    Grid.Column="2"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToText" />
+                </Border.GestureRecognizers>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Label 
+                   Text="Text"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+            <Border Grid.Row="3"
+                    Grid.Column="3"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToImages" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Bilder"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+            <Border Grid.Row="4"
+                    Grid.Column="1"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToAlert" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Popup-ruta"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Border>
+
+            <Border Grid.Row="4"
+                    Grid.Column="2"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToText" />
+                </Border.GestureRecognizers>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Label 
+                   Text="Text"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+            <Border Grid.Row="4"
+                    Grid.Column="3"
+                    Stroke="Black"
+                    StrokeThickness="1"
+                    Padding="10"
+                    BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5" />
+                </Border.StrokeShape>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToImages" />
+                </Border.GestureRecognizers>
+                <Label 
+                   Text="Bilder"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Border>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
