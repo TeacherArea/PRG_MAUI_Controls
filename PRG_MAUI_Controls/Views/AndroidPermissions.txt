@@ -1,0 +1,38 @@
+﻿Gå till AndroidManifest.xml, som finns i Mappen Android under Platforms
+
+Byt ut texten i den till:
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:roundIcon="@mipmap/appicon_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
+
+
+Skapa en ny mapp i mappen Android som heter res (små bokstäver)
+
+I mappen res ska en till mapp skapas som heter xml
+
+I mappen xml ska en fil med namnet network_security_config.xml
+
+I filen network_security_config.xml ska följande kod klippas in:
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">disney.se</domain>
+    </domain-config>
+</network-security-config>
+
+
+Förklaring:
+
+I manifestet har det tillkommit några rader. Den viktigaste är android:networkSecurityConfig="@xml/network_security_config" som pekar mot en säkerhetsfil. I den har vi nu tillåtit disney.se att dyka upp i Android-projektet. Det går att istället för den raden skriva in android:usesCleartextTraffic="true", men det skulle tillåta ALLA hemsidor access, vilket inte är speciellt bra. För att det överhuvudtaget ska fungera måste raden <uses-permission android:name="android.permission.INTERNET" /> finnas för att ge tillåtelse till internet.

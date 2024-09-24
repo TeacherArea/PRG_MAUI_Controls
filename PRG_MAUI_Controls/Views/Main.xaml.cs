@@ -2,12 +2,11 @@
 {
     public partial class Main : ContentPage
     {
-        int count = 0;
-
         public Main()
         {
             InitializeComponent();
         }
+
         private async void GoToText(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//Text");

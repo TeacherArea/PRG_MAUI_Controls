@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Progress"
+             Title="Progress">
+    <VerticalStackLayout Margin="20,0,20,0">
+        <Label 
+            Text="Progress"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="ProgressBar"
+               FontSize="16"
+               Margin="0,30,0,60"/>
+
+        <ProgressBar x:Name="ProgressBarControl"
+                     Progress="0"
+                     VerticalOptions="Center" />
+
+        <Label Text="ActivityIndicator"
+               FontSize="16"
+               Margin="0,60,0,30"/>
+
+        <ActivityIndicator x:Name="ActivityIndicatorControl" 
+                           IsRunning="False" 
+                           Color="Red" 
+                           Opacity="0"/>
+
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" Margin="0,50,0,0">
+            <Button Text="Start Loop"
+                    BackgroundColor="Green"
+                    x:Name="StartLoopButton"
+                    Clicked="StartLoop" />
+
+            <Button Text="Pause Loop"
+                    BackgroundColor="Firebrick"
+                    x:Name="PauseLoopButton"
+                    IsEnabled="False"
+                    Clicked="PauseLoop" />
+
+            <Button Text="Reset Loop"
+                    BackgroundColor="CadetBlue"
+                    x:Name="ResetLoopButton"
+                    Clicked="ResetLoop"
+                    IsEnabled="False" />
+        </HorizontalStackLayout>
+
+        <Label Text="Egen progressBar"
+               FontSize="16"
+               Margin="0,60,0,30"/>
+        
+        <Grid HeightRequest="30" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+            <BoxView Color="#F5F5F5" />
+            <BoxView x:Name="ProgressBarFill" Color="Purple" WidthRequest="0" HorizontalOptions="Start" />
+        </Grid>
+
+        <Button Text="Startsidan"
+                    Margin="50"
+                    BackgroundColor="Firebrick"
+                    x:Name="StartButton"
+                    Clicked="GoToStart" />
+    </VerticalStackLayout>
+</ContentPage>

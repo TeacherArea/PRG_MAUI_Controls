@@ -57,43 +57,51 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\res\xml\network_security_config.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AndroidResource Include="Platforms\Android\res\xml\network_security_config.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.90" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.90" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\Collections.xaml.cs">
+	  <Compile Update="Views\Collections.xaml.cs">
 	    <DependentUpon>Collections.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\Main.xaml.cs">
+	  <Compile Update="Views\Main.xaml.cs">
 	    <DependentUpon>Main.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\Animations.xaml">
+	  <MauiXaml Update="Views\Animations.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Collections.xaml">
+	  <MauiXaml Update="Views\Collections.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Forms.xaml">
+	  <MauiXaml Update="Views\Forms.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Images.xaml">
+	  <MauiXaml Update="Views\Images.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Progress.xaml">
+	  <MauiXaml Update="Views\Progress.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Switches.xaml">
+	  <MauiXaml Update="Views\Switches.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Text.xaml">
+	  <MauiXaml Update="Views\Text.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Time.xaml">
+	  <MauiXaml Update="Views\Time.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

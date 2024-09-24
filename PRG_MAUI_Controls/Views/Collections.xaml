@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PRG_MAUI_Controls.ViewModels"
+             x:Class="PRG_MAUI_Controls.Collections"
+             Title="Collections">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="20,0,20,20">
+
+            <Label Text="Listor, kollektioner &amp; sök" FontSize="20" HorizontalOptions="Center" />
+
+            <Label Text="En kollektion eller lista innehåller vanligen flera objekt, och kontrollerna &lt;CollectionsView&gt;, &lt;ListView och &lt;TableView är som gjorda för dem.&#10;&#10;Men vi behöver alltså en kollektion, som vi sen kan använda {Binding} på. Jag har statiskt lagt in tre studentet, och du kan fylla på listan med fler." Margin="0,20,0,10" />
+
+            <Label Text="Lägg till mer studenter i kollektionen" FontSize="16" Margin="0,20,0,10" />
+
+            <Entry Placeholder="Namn" Text="{Binding NewStudentName}" />
+            <Label Text="{Binding NameError}" TextColor="Red" IsVisible="{Binding IsNameErrorVisible}" />
+
+            <Entry Placeholder="Ålder" Margin="0,20,0,0" Text="{Binding NewStudentAge}" Keyboard="Numeric" />
+            <Label Text="{Binding AgeError}" TextColor="Red" IsVisible="{Binding IsAgeErrorVisible}" />
+
+            <Entry Placeholder="Kurs" Margin="0,20,0,0" Text="{Binding NewStudentCourse}" />
+            <Label Text="{Binding CourseError}" TextColor="Red" IsVisible="{Binding IsCourseErrorVisible}" />
+
+            <Button Text="Lägg till student" Margin="30,20,30,0" Command="{Binding AddStudentCommand}" />
+
+            <Label Text="En &quot;CollectionView&quot;" FontSize="16" Margin="0,50,0,0" />
+            <CollectionView ItemsSource="{Binding Students}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="{Binding Id, StringFormat='StudentID: {0}'}" />
+                            <Label Text="{Binding Age}" />
+                            <Label Text="{Binding Course}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="En &quot;CarouselView&quot;" FontSize="16" Margin="0,50,0,0" />
+            <Label Text="I en &lt;CarouselView&gt; kan vad som helst placeras, vanligt är bilder, men det går att använda dem för att visa objekt i en lista; som här. De styrs ibland av musen, så de kan ge märkliga utfall om du scollar fort." Margin="0,20,0,10" />
+            <CarouselView ItemsSource="{Binding Students}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0" HorizontalOptions="Center">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" HorizontalOptions="Center" />
+                            <Label Text="{Binding Course}" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <Label Text="En &quot;ListView&quot;" FontSize="16" Margin="0,50,0,15" />
+            <Label Text="Det går att välja ett objekt i listan genom att klicka på det, för att till exempel ta bort studenten, men i just detta exmpel händer det ingenting mer än att posten markeras." Margin="0,0,0,20" />
+            <ListView ItemsSource="{Binding Students}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Course}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="En &quot;Picker&quot;" FontSize="16" Margin="0,60,0,0" />
+            <HorizontalStackLayout>
+                <Label Text="Välj en student:" 
+                       Margin="0,30,0,0"/>
+                <Picker Title="Studentlista" 
+                        Margin="40,0,0,40" 
+                        ItemsSource="{Binding Students}" 
+                        ItemDisplayBinding="{Binding Name}"
+                        SelectedItem="{Binding SelectedStudent}" />
+            </HorizontalStackLayout>
+
+            <StackLayout Margin="0,20,0,0" IsVisible="{Binding SelectedStudent}">
+                <Label Text="Vald student" FontAttributes="Bold" FontSize="16" />
+                <Label Text="{Binding SelectedStudent.Name}" FontSize="14" />
+                <Label Text="{Binding SelectedStudent.Age, StringFormat='Ålder: {0}'}" FontSize="14" />
+                <Label Text="{Binding SelectedStudent.Course, StringFormat='Kurs: {0}'}" FontSize="14" />
+            </StackLayout>
+
+            <Label Text="En &quot;TableView&quot; är enbart till för visning" FontSize="16" Margin="0,50,0,0" />
+            <TableView x:Name="StudentTable" Margin="0,-20,0,0">
+                <TableRoot>
+                    <TableSection Title="" x:Name="StudentSectionTable">
+                        <!-- Dynamiska TextCells läggs till här -->
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Label Text="Sök i listan"
+                   FontSize="16"
+                   Margin="0,50,0,20"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="3" />
+
+            <SearchBar 
+                Placeholder="Sök här..." 
+                Text="{Binding SearchText}"
+                SearchCommand="{Binding SearchCommand}" 
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Margin="0,0,0,20"/>
+
+            <Label Text="Ingen träff på det sökta"
+                TextColor="Red"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                IsVisible="{Binding ShowNoResultsMessage}" />
+
+            <CollectionView ItemsSource="{Binding FilteredStudents}"
+                            IsVisible="{Binding IsSearchActive}" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="{Binding Age}" />
+                            <Label Text="{Binding Course}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
