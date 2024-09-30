@@ -11,6 +11,7 @@
             Routing.RegisterRoute("Switches", typeof(Switches));
             Routing.RegisterRoute("Animations", typeof(Animations));
             Routing.RegisterRoute("Forms", typeof(Forms));
+            Routing.RegisterRoute("Popups", typeof(Popups));
         }
     }
 }

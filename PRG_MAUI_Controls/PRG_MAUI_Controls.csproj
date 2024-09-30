@@ -92,6 +92,9 @@
 	  <MauiXaml Update="Views\Images.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Popups.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Progress.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

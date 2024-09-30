@@ -3,16 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG_MAUI_Controls.Time"
              Title="Time">
-    <VerticalStackLayout>
+
+    <VerticalStackLayout Margin="20,0,20,0" Spacing="20">
         <Label 
             Text="Tid &amp; Datum"
+            FontSize="20"
+            Margin="0,20,0,20"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <StackLayout>
-            <DatePicker/>
-            <TimePicker/>
-        </StackLayout>
+        <HorizontalStackLayout Spacing="20">
+            <DatePicker x:Name="datePickerControl"/>
+            <TimePicker x:Name="timePickerControl" Format="HH:mm"/>
+        </HorizontalStackLayout>
+
+        <Label x:Name="SelectedDateLabel"
+               Margin="0,20,0,0"         
+               Text="Välj datum ovan för att visa det här" />
+
+        <Label x:Name="SelectedTimeLabel"
+               Text="Välj tid ovan för att visa här" />
+
+        <Button Text="Visa valt datum &amp; tid"
+                Margin="50, 50, 50, 0"
+                BackgroundColor="Gray"
+                Clicked="ShowSelectedDateTime" />
+
+        <Button Text="Återställ till dagens datum"
+                Margin="50, 0, 50, 0"
+                BackgroundColor="Gray"
+                Clicked="ResetSelectedDateTime" />
 
         <Button Text="Startsidan"
                     Margin="50"

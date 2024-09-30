@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Popups"
+             Title="Popups">
+    <VerticalStackLayout>
+        <Label 
+            Text="Popup-rutor"
+            FontSize="20"
+            Margin="20,0,0,0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Popup-rutor heter lite olika beroende på språk. I javascipt heter en enkel popup med enbart information och en ok-knapp för &quot;alert&quot;, en ruta där användaren kan "
+            Margin="20,0,0,0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <HorizontalStackLayout>
+            <Button Text="Popup med ok"
+                Clicked="GoToAlert" />
+            <Button Text="Popup med ok/avbryt"
+                Clicked="GoToConfirm" />
+            <Button Text="Pop"
+                Clicked="GoToPrompt" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

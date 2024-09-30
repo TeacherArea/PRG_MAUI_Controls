@@ -49,10 +49,10 @@
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToAlert" />
+                    <TapGestureRecognizer Tapped="GoToPopups" />
                 </Border.GestureRecognizers>
                 <Label 
-                   Text="Popup-ruta"
+                   Text="Popup-rutor"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
             </Border>

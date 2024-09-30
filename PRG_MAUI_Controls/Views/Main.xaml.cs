@@ -12,14 +12,14 @@
             await Shell.Current.GoToAsync("//Text");
         }
 
+        private async void GoToPopups(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Popups");
+        }
+        
         private async void GoToImages(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//Images");
-        }
-
-        private async void GoToAlert(object sender, EventArgs e)
-        {
-            await DisplayAlert("Info", "Du klickade på fyrkanten!", "OK");
         }
 
         private async void GoToProgress(object sender, EventArgs e)
@@ -31,7 +31,6 @@
         {
             await Shell.Current.GoToAsync("Collections");
         }
-
         private async void GoToTime(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("Time");
@@ -46,7 +45,6 @@
         {
             await Shell.Current.GoToAsync("Forms");
         }
-
         private async void GoToAnimations(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("Animations");
