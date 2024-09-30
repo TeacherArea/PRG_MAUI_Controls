@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG_MAUI_Controls.Popups"
              Title="Popups">
-    <VerticalStackLayout>
+    <VerticalStackLayout Margin="20,20,20,0" Spacing="20">
         <Label 
             Text="Popup-rutor"
             FontSize="20"
@@ -11,19 +11,30 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Label 
-            Text="Popup-rutor heter lite olika beroende på språk. I javascipt heter en enkel popup med enbart information och en ok-knapp för &quot;alert&quot;, en ruta där användaren kan "
-            Margin="20,0,0,0"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
-        <HorizontalStackLayout>
-            <Button Text="Popup med ok"
+        <StackLayout Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3">
+            <Label Text="Popup-rutor heter lite olika beroende på språk. I javascipt heter de"/>
+            <Label Margin="20, 20,20,10" Text="• Alert: enbart information och en ok-knapp" />
+            <Label Margin="20,0,20,10" Text="• Confirm: information och två knappar (ok/avbryt) som returnerar antingen true eller false" />
+            <Label Margin="20,0,30,20" Text="• Prompt: information och en inmatningsruta, samt två knappar (ok/avbryt) där ok returnerar värdet i inamtningsrutan"  />
+            <Label Margin="0,0,20,10" Text="C# använder DisplayAlert för motsvarande alert och confirm, men alla andra varianter används DisplayPromptAsync med inställningen await, vilket även kräver att själva metoden är ställd till async."/>
+            <Label Margin="0,0,20,10" Text="Även om namnen Alert, Confirm och Prompt inte explicit används i C#, så är de etablerade."/>
+        </StackLayout>
+
+        <HorizontalStackLayout Spacing="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+            <Button Text="Alert"
                 Clicked="GoToAlert" />
-            <Button Text="Popup med ok/avbryt"
+            <Button Text="Confirm"
                 Clicked="GoToConfirm" />
-            <Button Text="Pop"
+            <Button Text="Prompt"
                 Clicked="GoToPrompt" />
         </HorizontalStackLayout>
+
+        <Label Text="Här visas eventuell respons på popuprutorna ovan"
+               Margin="0,10,0,0"
+               x:Name="ShowResponsLabel"/>
+        
     </VerticalStackLayout>
 </ContentPage>

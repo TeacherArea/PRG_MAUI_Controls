@@ -18,12 +18,12 @@ public partial class Popups : ContentPage
 
         if (answer)
         {
-        
+            ShowResponsLabel.Text = $"Du tryckte på \"OK\" vilket returnerade: {answer}";
         }
         
         else 
-        { 
-        
+        {
+            ShowResponsLabel.Text = $"Du tryckte på \"Avbryt/Cancel\" vilket returnerande: {answer}";
         }
     }
 
@@ -33,12 +33,12 @@ public partial class Popups : ContentPage
 
         if (!string.IsNullOrEmpty(name))
         {
-            Console.WriteLine($"Hej {name}, kul att träffas!");
+            ShowResponsLabel.Text = $"Hej {name}, kul att träffas!";
         }
         
         else
         {
-
+            ShowResponsLabel.Text = $"Du tryckte på \"Avbryt/Cancel\" vilket inte returnerade något.";
         }
     }
 }
