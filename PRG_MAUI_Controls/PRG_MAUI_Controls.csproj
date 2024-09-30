@@ -74,6 +74,9 @@
 	  <Compile Update="Views\Collections.xaml.cs">
 	    <DependentUpon>Collections.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Inoutput.xaml.cs">
+	    <DependentUpon>Inoutput.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Main.xaml.cs">
 	    <DependentUpon>Main.xaml</DependentUpon>
 	  </Compile>
@@ -90,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Images.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Inoutput.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Popups.xaml">

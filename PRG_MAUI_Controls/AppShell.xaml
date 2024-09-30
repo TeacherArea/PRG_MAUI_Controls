@@ -9,6 +9,7 @@
 
     <TabBar>
         <ShellContent Title="Start" Route="Main" ContentTemplate="{DataTemplate local:Main}" />
+        <ShellContent Title="In &amp; output" Route="Inoutput" ContentTemplate="{DataTemplate local:Inoutput}" />
         <ShellContent Title="Text" Route="Text" ContentTemplate="{DataTemplate local:Text}" />
         <ShellContent Title="Bilder" Route="Images" ContentTemplate="{DataTemplate local:Images}" />
     </TabBar>

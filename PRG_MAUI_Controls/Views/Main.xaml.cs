@@ -7,6 +7,11 @@
             InitializeComponent();
         }
 
+        private async void GoToInOutput(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//Inoutput");
+        }
+
         private async void GoToText(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//Text");

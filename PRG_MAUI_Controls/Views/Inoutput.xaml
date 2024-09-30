@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRG_MAUI_Controls.Inoutput"
+             Title="Inoutput"
+             x:Name="InoutputPage">
+    <ScrollView>
+        <VerticalStackLayout Margin="20,0,20,0">
+            <Label 
+            Text="Inputs &amp; outputs"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Label Margin="0,20,0,20" Text="Det absolut viktigaste för användargränssnitt är att ta reda på hur dels data visas på skärmen – i MAUI är det med &lt;Label&gt; för text – och dels hur data tas in från användaren; vanligen används &lt;Entry&gt;."/>
+            <Entry Text="Skriv något"
+               x:Name="EntryForUserInput"/>
+            <Label x:Name="ShowLabel"
+               Margin="0,20,0,20"/>
+            <Button Text="Skriv och klicka sen här"
+                Clicked="ShowSomethingButton"/>
+
+            <Label Margin="0,40,0,0" Text="Det finns naturligtvis fler intressanta sätt att ta emot och visa upp data från användaren. Exemplet nedan visar på en enkel funktion för en TODO-lista."/>
+            <Label Margin="0,20,0,0" Text="Vanligt är då att använda &lt;CollectionView&gt;, &lt;DataTemplate&gt; och &lt;SwipeView&gt; för att visa uppgifterna."/>
+
+
+            <Entry Margin="0,30,0,30" x:Name="NewTodoEntry" Placeholder="Skriv en uppgift" />
+            <Button Text="Lägg till uppgift"
+                    Command="{Binding AddTodoCommand}" 
+                    CommandParameter="{Binding Text, Source={x:Reference NewTodoEntry}}"/>
+
+            <CollectionView ItemsSource="{Binding Todos}" Margin="0,30,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                                        Text="Delete"
+                                        BackgroundColor="Red"
+                                        Command="{Binding BindingContext.RemoveTodoCommand, Source={x:Reference InoutputPage}}"
+                                        CommandParameter="{Binding .}"
+                                        />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid>
+                                <Label Text="{Binding}" FontSize="20" />
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
