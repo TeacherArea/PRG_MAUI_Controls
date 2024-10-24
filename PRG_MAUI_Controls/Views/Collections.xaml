@@ -80,11 +80,11 @@
                 <Label Text="{Binding SelectedStudent.Course, StringFormat='Kurs: {0}'}" FontSize="14" />
             </StackLayout>
 
-            <Label Text="En &quot;TableView&quot; är enbart till för visning" FontSize="16" Margin="0,50,0,0" />
+            <Label Text="En &quot;TableView&quot; är enbart till för visning" FontSize="16" Margin="0,50,0,30" />
             <TableView x:Name="StudentTable" Margin="0,-20,0,0">
                 <TableRoot>
                     <TableSection Title="" x:Name="StudentSectionTable">
-                        <!-- Dynamiska TextCells läggs till här -->
+                        <!-- Dynamiska TextCells läggs till här vid körnign -->
                     </TableSection>
                 </TableRoot>
             </TableView>

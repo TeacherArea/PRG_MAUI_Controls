@@ -23,7 +23,7 @@
                 <RowDefinition Height="100" />
                 <RowDefinition Height="155" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="1600" />
+                <RowDefinition Height="10" />
             </Grid.RowDefinitions>
 
             <Label Text="En studie i MAUI Controls"
@@ -243,41 +243,6 @@
                 <WebView Source="https://www.disney.com"
                          HeightRequest="800"/>
             </Border>
-
-            <StackLayout Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3">
-                <Label Margin="0, 60,0,20" Text="Android kräver mer rättigheter" FontSize="20" FontAttributes="Bold" />
-                <Label Margin="0,10" Text="1. Gå till AndroidManifest.xml, som finns i mappen Android under Platforms." />
-                <Label Margin="0,10" Text="2. Byt ut texten i den till:"  />
-                <Label Margin="20,10,0,0" Text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;" />
-                <Label Margin="40,10,0,0" Text="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;" />
-                <Label Margin="40,0,0,0" Text="&lt;application" />
-                <Label Margin="60,0,0,0" Text="android:allowBackup=&quot;true&quot;" />
-                <Label Margin="60,0,0,0" Text="android:roundIcon=&quot;@mipmap/appicon_round&quot;" />
-                <Label Margin="60,0,0,0" Text="android:supportsRtl=&quot;true&quot;" />
-                <Label Margin="60,0,0,0" Text="android:networkSecurityConfig=&quot;@xml/network_security_config&quot;" />
-                <Label Margin="40,10,0,0" Text="&lt;/application&gt;" />
-                <Label Margin="40,10,0,0" Text="&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;" />
-                <Label Margin="40,0,0,0" Text="&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;" />
-                <Label Margin="20,0,0,0" Text="&lt;/manifest&gt;" />
-                <Label Margin="0,20,0,0" Text="3. Skapa en ny mapp i mappen Android som heter res (små bokstäver). I mappen res ska en ytterligare mapp skapas som heter xml" />
-                <Label Margin="0,20,0,0" Text="4. I mappen xml ska en fil med namnet network_security_config.xml skapas" />
-                <Label Margin="0,20,0,0" Text="5. I filen network_security_config.xml ska följande kod klippas in:" />
-                <Label Margin="20,20,0,0" Text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;" />
-                <Label Margin="20,0,0,0" Text="&lt;network-security-config&gt;" />
-                <Label Margin="40,0,0,0" Text="&lt;domain-config cleartextTrafficPermitted=&quot;true&quot;&gt;" />
-                <Label Margin="60,0,0,0" Text="&lt;domain includeSubdomains=&quot;true&quot;&gt;disney.se&lt;/domain&gt;" />
-                <Label Margin="40,0,0,0" Text="&lt;/domain-config&gt;" />
-                <Label Margin="20,0,0,0" Text="&lt;/network-security-config&gt;" />
-                <Label Margin="0,20,0,0" Text="Förklaring" FontAttributes="Bold" FontSize="16"/>
-                <Label Margin="0,20,0,0" Text="I manifestet har det tillkommit några rader. Den viktigaste är "/>
-                <Label Margin="20,10,0,0" Text="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;" />
-                <Label Margin="0,10,0,0" Text="som pekar mot en säkerhetsfil. I den har vi nu tillåtit disney.se att dyka upp i Android-projektet. Det går att istället för den raden skriva in" />
-                <Label Margin="20,10,0,0" Text="android:usesCleartextTraffic=&quot;true&quot;" />
-                <Label Margin="0,10,0,0" Text="men det skulle tillåta ALLA hemsidor access, vilket inte är speciellt bra. För att det ska fungera måste även raden" />
-                <Label Margin="20,10,0,0" Text="&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;" />
-                <Label Margin="0,10,0,0" Text="finnas för att ge tillåtelse till internet." />
-                <Label Margin="0,50,0,0" FontAttributes="Italic" Text="Ovanstående text finns även i mappen Pages i projektet som textfil, om det är svårt att kopiera här." />
-            </StackLayout>
 
         </Grid>
     </ScrollView>
